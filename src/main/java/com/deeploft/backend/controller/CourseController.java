@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.UUID;
 
 @RestController
@@ -52,7 +53,7 @@ public class CourseController {
             Files.createDirectories(uploadPath);
         }
         Path filePath = uploadPath.resolve(fileName);
-        Files.copy(file.getInputStream(), filePath);
+        Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
         Map<String, String> response = new HashMap<>();
         response.put("url", fileName);
@@ -62,8 +63,10 @@ public class CourseController {
     @GetMapping
     public List<Course> getAllCourses(
             @RequestParam(required = false) String query,
-            @RequestParam(required = false) Boolean freeOnly) {
-        return courseService.getAllCourses(query, freeOnly);
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) Boolean freeOnly,
+            @RequestParam(required = false) String status) {
+        return courseService.getAllCourses(query, category, freeOnly, status);
     }
 
     @GetMapping("/recommendations/{email}")
@@ -84,6 +87,11 @@ public class CourseController {
     @PutMapping("/{id}")
     public Course updateCourse(@PathVariable Long id, @RequestBody Course course) {
         return courseService.updateCourse(id, course);
+    }
+
+    @PutMapping("/{id}/review")
+    public Course reviewCourse(@PathVariable Long id, @RequestParam String status, @RequestParam(required = false) String comment) {
+        return courseService.approveCourse(id, status, comment);
     }
 
     @DeleteMapping("/{id}")

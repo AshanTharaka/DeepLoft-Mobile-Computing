@@ -16,12 +16,17 @@ public class Course {
     private Long id;
     private String title;
     private String instructor;
+    private String instructorEmail;
     private double price;
     private String description;
     private String imageUrl;
     private String category;
+    private String status; // "DRAFT", "PENDING_APPROVAL", "PUBLISHED", "REJECTED"
+    private String adminReviewComment;
+    @Column(length = 2000)
+    private String courseAiSummary;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "course_id")
     private List<Lesson> lessons;
 }

@@ -28,4 +28,5 @@ public class Enrollment {
     private double amountPaid;
     private double instructorEarnings;
     private double platformCommission;
+    private Long lastWatchedLessonId;
 }

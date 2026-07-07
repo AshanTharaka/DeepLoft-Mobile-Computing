@@ -23,4 +23,9 @@ public class EnrollmentController {
     public Enrollment enroll(@RequestBody Enrollment enrollment) {
         return enrollmentService.enrollUser(enrollment);
     }
+
+    @PutMapping("/{email}/{courseId}/last-lesson/{lessonId}")
+    public void updateLastWatched(@PathVariable String email, @PathVariable Long courseId, @PathVariable Long lessonId) {
+        enrollmentService.updateLastWatchedLesson(email, courseId, lessonId);
+    }
 }

@@ -5,6 +5,7 @@ import com.deeploft.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,6 +33,12 @@ public class UserService {
                     user.setBankName(updatedUser.getBankName());
                     return userRepository.save(user);
                 });
+    }
+
+    public List<User> getUsersByRole(String role) {
+        return userRepository.findAll().stream()
+                .filter(user -> user.getRole() != null && user.getRole().equalsIgnoreCase(role))
+                .collect(java.util.stream.Collectors.toList());
     }
 
     public void deleteUser(String email) {

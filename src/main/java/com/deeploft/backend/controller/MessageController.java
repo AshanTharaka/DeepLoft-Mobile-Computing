@@ -18,6 +18,11 @@ public class MessageController {
         return messageService.getChat(user1, user2);
     }
 
+    @GetMapping("/conversations/{email}")
+    public List<Message> getConversations(@PathVariable String email) {
+        return messageService.getConversations(email);
+    }
+
     @PostMapping
     public Message sendMessage(@RequestBody Message message) {
         return messageService.sendMessage(message);
