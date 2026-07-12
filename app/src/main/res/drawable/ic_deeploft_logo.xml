@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Background Circle -->
+    <path
+        android:pathData="M100,100m-90,0a90,90 0,1 1,180 0a90,90 0,1 1,-180 0"
+        android:fillColor="#F5F5F5"/>
+
+    <!-- Deep (Stylized D) -->
+    <path
+        android:pathData="M60,70 L80,70 C95,70 105,85 105,100 C105,115 95,130 80,130 L60,130 Z M75,85 L75,115 L80,115 C90,115 95,107 95,100 C95,93 90,85 80,85 Z"
+        android:fillColor="@color/logo_deep"/>
+
+    <!-- Loft (Stylized L inside D area or adjacent) -->
+    <path
+        android:pathData="M115,70 L115,130 L140,130 L140,115 L128,115 L128,70 Z"
+        android:fillColor="@color/logo_loft"/>
+
+    <!-- Text representation for internal use -->
+    <!-- We will use this vector as the icon foreground -->
+</vector>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_deeploft_logo"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deep"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/logo_deep" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loft"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/logo_loft" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your AI-Powered Academic Journey"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/btn_join_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join as a Student"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btn_join_instructor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join as an Instructor"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+    <TextView
+        android:id="@+id/tv_already_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Login"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/design_default_color_primary" />
+
+</LinearLayout>
