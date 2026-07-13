@@ -8,7 +8,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     // Use http://10.0.2.2:8080/ for Android Emulator
-    // Use http://192.168.1.24:8080/ for Physical Device (if your PC IP is correct)
     private static final String BASE_URL = "http://10.0.2.2:8080/";
     private static Retrofit retrofit = null;
     private static ApiService apiService = null;
@@ -19,7 +18,6 @@ public class RetrofitClient {
 
     public static ApiService getApiService() {
         if (apiService == null) {
-            System.out.println("Initializing Retrofit with BASE_URL: " + BASE_URL);
             if (retrofit == null) {
                 OkHttpClient okHttpClient = new OkHttpClient.Builder()
                         .connectTimeout(30, TimeUnit.SECONDS)

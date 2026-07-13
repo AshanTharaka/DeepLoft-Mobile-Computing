@@ -225,7 +225,6 @@ public class InstructorDashboardFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<List<Course>> call, @NonNull Response<List<Course>> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    double totalEarnings = 0;
                     myCourses.clear();
                     for (Course course : response.body()) {
                         if (instructorName != null && instructorName.equalsIgnoreCase(course.getInstructor())) {
@@ -233,11 +232,11 @@ public class InstructorDashboardFragment extends Fragment {
                         }
                     }
                     
-                    // We don't simulate sales here anymore, we use real backend balance
                     fetchRealBalance(instructorName);
 
                     if (myCourses.isEmpty()) {
                         tvNoCoursesMsg.setVisibility(View.VISIBLE);
+                        if (getContext() != null) Toast.makeText(getContext(), "No courses found for " + instructorName, Toast.LENGTH_SHORT).show();
                     } else {
                         tvNoCoursesMsg.setVisibility(View.GONE);
                     }
@@ -262,7 +261,8 @@ public class InstructorDashboardFragment extends Fragment {
                 if (response.isSuccessful() && response.body() != null) {
                     currentBalance = response.body().get("balance");
                     tvWithdrawable.setText(getString(R.string.available_payout, String.format("%.2f", currentBalance)));
-                    tvEarnings.setText("$" + String.format("%.2f", currentBalance)); // For simplicity showing same
+                    tvEarnings.setText("$" + String.format("%.2f", currentBalance));
+                    if (getContext() != null) Toast.makeText(getContext(), "Balance loaded: $" + currentBalance, Toast.LENGTH_SHORT).show();
                 }
             }
 

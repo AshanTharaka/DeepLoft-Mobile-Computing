@@ -14,118 +14,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Deeploft"
-        android:usesCleartextTraffic="true"
-        android:hardwareAccelerated="false">
+        android:usesCleartextTraffic="true">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:hardwareAccelerated="false"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CourseDetailActivity"
-            android:exported="false"
-            android:hardwareAccelerated="false"
-            android:label="Course Details" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"
-            android:hardwareAccelerated="false" />
-        <activity
-            android:name=".WelcomeActivity"
-            android:exported="false"
-            android:hardwareAccelerated="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CourseContentActivity"
-            android:exported="false"
-            android:hardwareAccelerated="false"
-            android:label="Learning"
-            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize" />
-        <activity
-            android:name=".CreateCourseActivity"
-            android:exported="false"
-            android:hardwareAccelerated="false"
-            android:label="Create Course" />
-        <activity
-            android:name=".AddLessonActivity"
-            android:exported="false"
-            android:hardwareAccelerated="false"
-            android:label="Add Lesson" />
-        <activity
-            android:name=".CourseAIChatActivity"
-            android:exported="false"
-            android:label="Academic AI" />
-        <activity
-            android:name=".CertificateActivity"
-            android:exported="false"
-            android:label="Certificate" />
-        <activity
-            android:name=".QuizActivity"
-            android:exported="false"
-            android:label="Knowledge Check" />
-        <activity
-            android:name=".PayoutSettingsActivity"
-            android:exported="false"
-            android:label="Payout Settings" />
-        <activity
-            android:name=".AdminDashboardActivity"
-            android:exported="false"
-            android:label="Platform Admin" />
-        <activity
-            android:name=".AdminRevenueActivity"
-            android:exported="false"
-            android:label="Platform Revenue" />
-        <activity
-            android:name=".AdminWithdrawalsActivity"
-            android:exported="false"
-            android:label="Withdrawal Requests" />
-        <activity
-            android:name=".PayoutHistoryActivity"
-            android:exported="false"
-            android:label="Payout History" />
-        <activity
-            android:name=".AnalyticsActivity"
-            android:exported="false"
-            android:label="Sales Analytics" />
-        <activity
-            android:name=".InstructorStudentProgressActivity"
-            android:exported="false"
-            android:label="Student Progress" />
-        <activity
-            android:name=".StudyPlanActivity"
-            android:exported="false"
-            android:label="AI Study Plan" />
-        <activity
-            android:name=".ChatActivity"
-            android:exported="false"
-            android:label="Message" />
-        <activity
-            android:name=".MessageListActivity"
-            android:exported="false"
-            android:label="My Chats" />
-        <activity
-            android:name=".ManagementListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TeacherProfileActivity"
-            android:exported="false"
-            android:label="Teacher Profile" />
-        <activity
-            android:name=".PaymentActivity"
-            android:exported="false"
-            android:label="Checkout" />
-        <activity
-            android:name=".AchievementsActivity"
-            android:exported="false"
-            android:label="My Achievements" />
+
+        <activity android:name=".CourseDetailActivity" android:exported="false" android:label="Course Details" />
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".WelcomeActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".CourseContentActivity" android:exported="false" android:label="Learning" />
+        <activity android:name=".CreateCourseActivity" android:exported="false" android:label="Create Course" />
+        <activity android:name=".AddLessonActivity" android:exported="false" android:label="Add Lesson" />
+        <activity android:name=".CourseAIChatActivity" android:exported="false" android:label="Academic AI" />
+        <activity android:name=".CertificateActivity" android:exported="false" android:label="Certificate" />
+        <activity android:name=".QuizActivity" android:exported="false" android:label="Knowledge Check" />
+        <activity android:name=".PayoutSettingsActivity" android:exported="false" android:label="Payout Settings" />
+        <activity android:name=".AdminDashboardActivity" android:exported="false" android:label="Platform Admin" />
+        <activity android:name=".AdminRevenueActivity" android:exported="false" android:label="Platform Revenue" />
+        <activity android:name=".AdminWithdrawalsActivity" android:exported="false" android:label="Withdrawal Requests" />
+        <activity android:name=".PayoutHistoryActivity" android:exported="false" android:label="Payout History" />
+        <activity android:name=".AnalyticsActivity" android:exported="false" android:label="Sales Analytics" />
+        <activity android:name=".InstructorStudentProgressActivity" android:exported="false" android:label="Student Progress" />
+        <activity android:name=".StudyPlanActivity" android:exported="false" android:label="AI Study Plan" />
+        <activity android:name=".ChatActivity" android:exported="false" android:label="Message" />
+        <activity android:name=".MessageListActivity" android:exported="false" android:label="My Chats" />
+        <activity android:name=".ManagementListActivity" android:exported="false" />
+        <activity android:name=".TeacherProfileActivity" android:exported="false" android:label="Teacher Profile" />
+        <activity android:name=".PaymentActivity" android:exported="false" android:label="Checkout" />
+        <activity android:name=".AchievementsActivity" android:exported="false" android:label="My Achievements" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
