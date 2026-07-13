@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Deeploft" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/logo_deep</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+    <style name="Theme.Deeploft" parent="Base.Theme.Deeploft" />
+</resources>

@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Solid Premium Background -->
+    <path
+        android:pathData="M50,50m-45,0a45,45 0,1 1,90 0a45,45 0,1 1,-90 0"
+        android:fillColor="#1A237E"/>
+
+    <!-- The 'D' (White) -->
+    <path
+        android:pathData="M30,30 H50 C65,30 75,40 75,50 C75,60 65,70 50,70 H30 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"/>
+
+    <!-- The 'L' (Teal - Bold & Sharp) -->
+    <path
+        android:pathData="M38,38 V62 H55"
+        android:strokeColor="#00BFA5"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Decorative Insight Path -->
+    <path
+        android:pathData="M60,40 L65,35 M65,40 L60,35"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"/>
+
+</vector>

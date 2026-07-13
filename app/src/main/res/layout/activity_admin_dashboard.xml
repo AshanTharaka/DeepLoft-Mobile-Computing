@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard (Platform Owner)"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Platform Commission (20%)"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tv_admin_total_commission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_green_dark" />
+
+                <Button
+                    android:id="@+id/btn_admin_view_revenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Detailed Analytics"
+                    android:layout_marginTop="8dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Platform Management"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp" />
+
+        <Button
+            android:id="@+id/btn_admin_view_courses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage All Courses"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btn_admin_review_queue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Approval Queue"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btn_admin_view_students"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View All Students"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btn_admin_view_instructors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View All Instructors"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btn_admin_view_payout_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Platform Payout Logs"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btn_admin_view_withdrawals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage Withdrawal Requests"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Payout Details"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp" />
+
+        <EditText
+            android:id="@+id/et_admin_bank_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Bank Name"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/et_admin_bank_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Private Account Number"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btn_save_admin_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update My Details"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>
