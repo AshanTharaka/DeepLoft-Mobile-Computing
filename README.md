@@ -142,6 +142,11 @@ ashan@deeploft.com
 > **Note:** The application recognizes `ashan@deeploft.com` as the administrator account. Any password can be used for login.
 
 ---
+## Course Bying Instructions
+
+1. when buying a course as a student, select paypal as the payment from given payment options.
+2. touch in pay and confirm button
+3. course will be unlocked (don't need to provide any payment details)
 
 ## Project Structure
 
