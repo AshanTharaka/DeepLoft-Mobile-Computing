@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Lesson"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/et_lesson_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lesson Title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lesson Video"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_video_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No video selected"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btn_pick_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Video from Gallery"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btn_save_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Lesson"
+            android:layout_marginTop="32dp" />
+
+    </LinearLayout>
+</ScrollView>

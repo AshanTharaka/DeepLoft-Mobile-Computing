@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Course"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/et_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Course Title" />
+
+        <EditText
+            android:id="@+id/et_course_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/et_course_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price ($)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Cover Image"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_course_preview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:background="#EEEEEE" />
+
+        <Button
+            android:id="@+id/btn_pick_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Image from Gallery"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Category"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_course_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sw_course_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Published"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Lessons"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold" />
+
+        <!-- Fixed height container for lessons with its own scroll bar -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/editbox_background">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_create_lessons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="false" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_add_lesson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Lesson"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btn_save_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Publish Course"
+            android:layout_marginTop="32dp" />
+
+        <Button
+            android:id="@+id/btn_delete_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Course"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

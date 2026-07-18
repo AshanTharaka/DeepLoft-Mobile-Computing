@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.deeploft.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.deeploft.fragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_ai_assistant"
+        android:name="com.example.deeploft.fragments.AIAssistantFragment"
+        android:label="AI Assistant"
+        tools:layout="@layout/fragment_ai_assistant" />
+
+    <fragment
+        android:id="@+id/navigation_my_courses"
+        android:name="com.example.deeploft.fragments.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard_container" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.deeploft.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_instructor"
+            app:destination="@id/navigation_instructor" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_instructor"
+        android:name="com.example.deeploft.fragments.InstructorDashboardFragment"
+        android:label="Instructor Dashboard"
+        tools:layout="@layout/fragment_instructor_dashboard" />
+</navigation>
